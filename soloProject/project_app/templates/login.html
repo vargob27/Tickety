@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="row">
+        <h1 id="title">Tickety</h1>
+    </div>
+    <div id="login">
+        <div class="row">
+            <div class="col-3 offset-3">
+                <h1>Register</h1>
+                <form action="/register" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        <tr>
+                            <td><label class="form-label" for="first_name">First Name</label></td>
+                            <td><input type="text" name="first_name" id="" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="form-label" for="last_name">Last Name</label></td>
+                            <td><input type="text" name="last_name" id="" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="form-label" for="email">Email</label></td>
+                            <td><input type="text" name="email" id="" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="form-label" for="password">Password</label></td>
+                            <td><input type="password" name="password" id="" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="form-label" for="confirm_password">Confirm Password</label></td>
+                            <td><input type="password" name="confirm_password" id="" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="Register"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="col-6">
+                <h1>Login</h1>
+                <form action="/login" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        <td><label class="form-label" for="email">Email</label></td>
+                        <td><input type="text" name="email" id="" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="form-label" for="password">Password</label></td>
+                            <td><input type="password" name="password" id="" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Login"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        {% if messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </button>
+            <ul>
+                {% for message in messages %}
+                <li>{{message}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

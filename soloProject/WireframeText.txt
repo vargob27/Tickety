@@ -1,0 +1,17 @@
+Ticket System / Workflow App
+1) Users will register / log in
+2) The home page will show all available tickets
+3) A ticket can be assigned to a registered user and can be marked complete by authorized users
+4) Going to a users page will show all information about the user and also show all tickets assigned to that user
+5) Users will be able to create new tickets and give a description, due date, and estimated work hours for the ticket.
+6) Logged in users who are assigned tasks can Drop the task
+7) If the logged in user created a ticket they can also delete the ticket.
+
+MVP-
+full crud app
+working valiadtions
+assign tickets to users
+
+-would like to add-
+comment section for tasks
+upvotes for unassigned tasks to prioritize by popularity
