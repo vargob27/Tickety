@@ -6,7 +6,7 @@
 ![Alt text](/soloProject/screenshots/Wireframe.png?raw=true "Optional Title")
 ---
 ## Login Screen:  
-#### Existng users can simply login but new users will have to create an account. All passwords are salted and hashed
+#### Existing users can simply login but new users will have to create an account. All passwords are salted and hashed
 ![Alt text](/soloProject/screenshots/login.png?raw=true "Optional Title")
 ---
 ## Home Screen:  
