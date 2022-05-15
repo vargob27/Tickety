@@ -91,7 +91,8 @@
             <td>Assigned to:</td>
             <td>{% for user in task.assigned.all %}
                 <p><a href="/user/{{user.id}}" class="links">{{user.first_name}} {{user.last_name}}</a></p>
-                {% endfor %}</td>
+                {% endfor %}
+            </td>
         </tr>
         <tr>
             <td>Creator:</td>
